@@ -1,0 +1,106 @@
+/* aqui será colocado todas que nao sao globais ou seja igauis ao resto do site  */
+
+.content {
+  display: grid;
+  grid-template-columns: 60% 40%; /*aqui estou fazendo a divisão das colunas do content */
+  /* precisa semre dar 100% */
+  grid-template-rows: 11.4rem 1fr;
+
+  /* aqui estou editando o cabeçalho do lado esquerdo e direito*/
+  grid-template-areas:
+    "header header"
+    "left right";
+}
+
+header {
+  grid-area: header;
+}
+
+#bg {
+  grid-area: left; /* esquerda */
+
+  background: url("/assets/home-room.svg") no-repeat top/contain; /*  esse comando em azul é para alinhar a img e nao ficar bugada */
+  background-position-x: -10rem; /*   aqui estou usando plano carteziano pra jogar a imagem um poura o lado        */
+}
+/* aqui estou editando tudo que esta dentro do meu main */
+main {
+  grid-area: right; /* aqui estou declarando a posição da img */
+
+  display: flex;
+  align-items: center; /* diplay flex para usarmos o align items */
+  margin-top: -12rem; /* altura dos meus botoẽs e textos, img */
+}
+
+main .container {
+  width: min(
+    36.3rem,
+    100%
+  ); /* aqui é uma garantia de que independente do tamanho da tela vai se alinhae a 36.3rem ou 100% */
+}
+
+main h2 {
+  font-family: "poppins", sans-serif; /* fonte da letra (não pegou a font pois nao coloquei a localisação dela)*/
+  color: var(--black);
+  font-size: clamp (20px, 5vw 2.8rem); /*aqui estou colocando para ficar de acordo com tamanho da tela */
+  margin-bottom: 2.4rem;
+}
+
+input {
+  border: 0.2rem solid var(--grey-blue);
+  padding: 0 1.6rem;
+}
+
+input,
+button,
+.button {
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+
+/* Separator */
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.separator div:nth-child(2) {
+  color: var(--grey-blue);
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  padding: 0 /*0 == para zerar em cima e em baixo*/ 1.35rem; /*  aqui estou fazendo o espacinho do ou com os separadores   */
+  line-height: 0; /* aqui eu comentei pois está tirando o espaço entre os textos */
+}
+
+/*  estou editando os separadores usando div nth-child  */
+.separator div:nth-child(1),
+.separator div:nth-child(3) {
+  background: var(--grey-blue);
+  width: 100%;
+  height: 1px;
+}
+
+/*  creat balls */
+.ball {
+  /*    aqui estou editando as duas bolinhas       */
+  width: 21.2rem;
+  height: 21.2rem;
+  background: var(--blue);
+  clip-path: circle();
+
+  position: fixed;
+}
+
+.ball.top {
+  top: -53rem;
+  width: 63.3rem;
+  right: -39rem;
+  height: 73.3rem;
+  opacity: 10%;
+}
+
+.ball.bottom {
+  bottom: -15rem;
+  right: 5.6rem;
+  opacity: 10%;
+}
