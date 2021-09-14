@@ -1,7 +1,7 @@
 /*        css do room questions and answers              */
 
 .content {
-  max-width: 90%; /*  aqui estou editando o espaço lateral do header "content"  */
+  max-width: min(112rem, 90%); /*  aqui estou editando o espaço lateral do header "content"  */
 }
 
 #room header {
@@ -51,6 +51,8 @@
   border: 0.2rem solid var(--grey-blue);
   padding: 1.6rem;
   border-radius: 0 0.8rem 0.8rem 0.8rem;
+
+  margin-bottom: 1.6rem;
 }
 
 #question-form form textarea {
@@ -73,8 +75,21 @@
 }
 
 #question-form form footer > div {
+  display: flex;
+  align-items: center;
+
   color: var(--icons-details);
   font-family: "poppins", sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
+}
+
+#question-form form footer > div img{
+    margin-right: 0.9rem;
+}
+
+#question-form form footer button{ /* aqui estou editando o button (enviar) */
+  height:auto;      /* altura */
+  padding: 0.8rem 2.4rem; /*preenchimento */
+  line-height: 2.4rem;
 }
