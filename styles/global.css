@@ -23,6 +23,7 @@ html {
   --grey-blue: #a1b2cd;
   --grey-medium: #d3d9e2;
   --grey-light: #e5eaf1;
+  --grey-medium: #eaecf1;
 
   /* 1rem = 16px (user Agent) = 100% */
   font-size: 62.5%; /* 10px */

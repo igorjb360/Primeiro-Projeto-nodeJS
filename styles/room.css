@@ -108,6 +108,12 @@
   align-items: center;
 }
 
+.question-wrapper .question-content .user{
+  background: var(--blue);
+  clip-path: circle();
+  padding: 1.4rem;
+}
+
 .question-wrapper .question-content p{ 
   margin-left: 1.6rem;
 }
@@ -121,6 +127,7 @@
 .question-wrapper .actions > a{ /*    aqui estou editando check e o excluir        */
   display: flex;
   align-items: center;  
+  color: var(--grey);
 }
 
 .question-wrapper .actions > a > img{
@@ -135,7 +142,14 @@
   margin-left: 2.4rem;
 }
 
+/* Question Read */
+.question-wrapper.read{
+  background: var(--grey-medium);
+}
 
+.question-wrapper.read .question-content .user{
+  background: var(--grey-blue);
+}
 
 
 
