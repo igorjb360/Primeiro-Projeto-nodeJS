@@ -2,6 +2,13 @@ import Modal from './modal.js'
 
 const modal = Modal()
 
+// aqui estou querendo pegar  o que está dentro da modal o h2
+const modalTitle = document.querySelector('.modal h2')
+// aqui estou querendo pegar  o que está dentro da modal o p
+const modalDescription = document.querySelector('.modal p')
+// aqui escou querendo pegar o botao sim excluir 
+const modalButton = document.querySelector('.modal button')
+
 // pegar quando o marcar como lido  for clicado
 //pegar todos os botoẽs que existe com a classe check
 const checkButtons = document.querySelectorAll(".actions a.check")
