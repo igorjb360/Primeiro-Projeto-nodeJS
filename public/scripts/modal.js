@@ -1,4 +1,4 @@
-export default function Modal(){     //module.exports serve para imporar a modal
+export default function Modal(){ // exportando a modal
     
     // atribui esssa variavel const aqui para poder so chamar o modalWrapper posteriormente e nao precisar ficar atribuindo o documnt
     const modalWrapper = document.querySelector('.modal-wrapper')

@@ -3,7 +3,7 @@
     opacity: 1;
 }
 
-.modal-wrapper{
+.modal-wrapper {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -17,7 +17,7 @@
     opacity: 0;
 }
 
-.modal-wrapper .modal{
+.modal-wrapper .modal { /*  */
     width: min(59rem, 90%);
     background: var(--white);
     margin: auto;

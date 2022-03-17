@@ -13,15 +13,16 @@ const modalButton = document.querySelector('.modal button')
 //pegar todos os botoẽs que existe com a classe check
 const checkButtons = document.querySelectorAll(".actions a.check")
 
-// aqui estou checando o bottao 
+//forEach= Estou percorrendo todos os bottoẽs que tem a classe check
 checkButtons.forEach(button => {
     // add a escuta quando clicar vai abrir a modal-wrapper
-    button.addEventListener ("click", handleClick)
+    button.addEventListener ("click", handleClick) 
 })
 
-// aqui vou fazer a logica do delete para abrir a modalwrapper usa All para pegar todas as variaveis
+// aqui vou fazer a logica do delet (excluir) para abrir a modalwrapper usa All para pegar todas as variaveis
 const deletebutton = document.querySelectorAll(".actions a.delete")
 
+//forEach= Estou percorrendo todos os bottoẽs que tem a classe delete
 deletebutton.forEach(button => {
     // add a escuta quando clicar vai abrir a modal-wrapper
     button.addEventListener ("click", (event) => handleClick(event, false))
@@ -37,7 +38,7 @@ function handleClick(event, check = true){
     const questionId = event.target.dataset.id
 
     const form = document.querySelector(".modal form")
-    form.setAttribute("action", `/room/${roomId}/${questionId}/${slug}`)
+    form.setAttribute("action", `/question/${roomId}/${questionId}/${slug}`)
    
     modalTitle.innerHTML = `${text} Essa pergunta`
     modalDescription.innerHTML = `tem certeza que deseja ${text.toLowerCase()} essa pergunta?` 

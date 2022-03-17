@@ -13,13 +13,15 @@
    <!-- fonts -->
    <link rel = "preconnect" href = "https://fonts.googleapis.com">
    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
-   <link href = "https: //fonts.googleapis.com/css2? family = Open + Sans & display = swap "rel =" stylesheet ">
+   <link href = "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"rel="stylesheet">
 
   </head>
   <body>
     <div id="home" class="content">
       <header>
-        <img src="images/logo.svg" alt="rocket.q logo"/>
+        <a href="/">
+            <img src="images/logo.svg" alt="rocket.q logo"/> 
+       </a>
       </header>
       
       <div id="bg">
@@ -31,7 +33,7 @@
       <main>
         <div class="container"> 
           <!-- Vai renderizar a part correta de acordo com a url-->
-          <%-   include(`parts/${page}`)        %> <!--  mesmo com vermelho no < ta pegando a url-->
+          <%-   include(`parts/${page}`) %> <!--  mesmo com vermelho no < ta pegando a url-->
         </div>
       </main>
     </div>
